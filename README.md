@@ -38,7 +38,7 @@ phases (and, within phases, session by session).
 | Phase | Scope | Status |
 |---|---|---|
 | 1 | Skeleton: folder tree, overview docs, datasets | ✅ Complete |
-| 2 | Module 1 (sessions 1–4) + prerequisite check | ⬜ Not started |
+| 2 | Module 1 (sessions 1–4) + prerequisite check | 🔄 In progress — Session 1 drafted |
 | 3 | Modules 2–5 (sessions 5–21) + module checkpoints | ⬜ Not started |
 | 4 | Capstone module + teacher & student resources | ⬜ Not started |
 
