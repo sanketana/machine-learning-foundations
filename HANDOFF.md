@@ -29,7 +29,7 @@
 
 ### Brand and pedagogical context
 - Sanketana targets sophisticated parents; content must have genuine depth, never shallow or gimmicky.
-- Core thesis: students become "the person AI works for," not generic coders. The two-layer approach applies: visible project outputs + hidden thinking skills (Mental Modeling, Intentional Direction, Critical Evaluation, Selective Judgment, Ethical Reasoning).
+- Core thesis: students learn how ML algorithms work, when to use them, and how to reason about results — genuine conceptual depth backing every visible project output, never just "how to run the code." (Note: this is a coding/ML course, not the AI Fluency course — do **not** import the AI Fluency "thinking skills" framing such as Mental Modeling, Critical Evaluation, Selective Judgment, or Ethical Reasoning. Lesson plans list concrete learning outcomes only.)
 - "Coach not curriculum" identity: the roadmap is fixed, but pacing, examples, and projects adapt to the student. Every lesson plan must include differentiation notes (see template §6).
 - Tone of all materials: warm, precise, intellectually respectful of the student. No baby-talk, no hype.
 
@@ -119,7 +119,7 @@ These decisions were made during curriculum review and are **binding** for gener
 
 ---
 
-## 5. Ethics Layer (maps to Sanketana's Ethical Reasoning thinking skill)
+## 5. Ethics Layer
 
 Not a separate lecture — threaded into moments where it has teeth:
 
@@ -227,8 +227,8 @@ Every `lesson-plan.md` follows this structure (adapted from the Sanketana AI Flu
 1. **Lesson Theme** — One-line session identity + where it sits in the arc (what came before, what comes next, which recurring threads are active).
 2. **Key Activity** — The one hands-on thing the student will remember from this session.
 3. **Tools & Materials** — Libraries, dataset(s), notebooks, any visual aids. Exact file references into the repo.
-4. **Learning Outcomes & Thinking Skills** — 3–5 concrete outcomes ("Student can explain why we split data before training") + which of the five Sanketana thinking skills this session exercises and how.
-5. **Timestamped Class Activities** — Minute-by-minute 60-min plan. Mandatory rhythm: 0:00–0:10 homework review (from Session 2 onward) → concept block with live visual/demo → guided coding in classwork notebook → student-driven stretch → 5-min wrap connecting to the workflow mantra and previewing homework.
+4. **Learning Outcomes** — 3–5 concrete, observable outcomes ("Student can explain why we split data before training"). Outcomes only — this is an ML course, not the AI Fluency course, so do **not** add a "thinking skills" subsection.
+5. **Class Activities** — A **high-level summary table** with three columns: **Phase | What happens | Purpose**. Each row is one phase of the hour. **Not minute-by-minute timestamps** (too granular for a 1:1 instructor). Keep the mandatory rhythm as the ordered phases: homework review (from Session 2 onward) → concept block with live visual/demo → guided coding in classwork notebook → student-driven stretch → wrap connecting to the workflow mantra and previewing homework.
 6. **Differentiation Notes** — "If the student is flying" (stretch path) and "If the student is struggling" (simplification path, what to cut, what is non-negotiable). This is the "coach not curriculum" section — it must be specific, not generic.
 7. **Student Templates / Starter Materials** — What's pre-filled in the classwork notebook vs what the student writes; scaffolding level for this session.
 8. **Teacher Prep Notes** — What to run/check before class; known failure points (library versions, dataset gotchas); the session's likely misconceptions (cross-reference `common-misconceptions.md`).

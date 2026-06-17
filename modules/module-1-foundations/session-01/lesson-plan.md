@@ -27,7 +27,7 @@ The student builds a "model" that is a pure lookup table: it answers perfectly f
   Machine learning:          data  + answers  →  rules (a "model")
   ```
 
-## 4. Learning Outcomes & Thinking Skills
+## 4. Learning Outcomes
 
 By the end of the session the student can:
 
@@ -36,25 +36,21 @@ By the end of the session the student can:
 3. Classify a described task as supervised or unsupervised and justify the choice in one sentence.
 4. Explain why the lookup-table model's perfect score proves nothing, using the phrase "memorizing, not learning."
 
-**Thinking skills exercised:**
+## 5. Class Activities
 
-- **Mental Modeling** — the two-box diagram is the course's first mental model; the student should be able to redraw it from memory.
-- **Critical Evaluation** — interrogating the hand-written rule system ("find a hit song that breaks these rules") and the lookup-table's fake perfection.
-- **Intentional Direction** (light) — the "predict ___ from ___" framing is the seed of asking precise questions of data, which the capstone will demand.
+A high-level map of how to unfold the hour. Adapt pacing to the student; protect the lookup-table moment.
 
-## 5. Timestamped Class Activities
+> No homework review today — Session 1 is the only session that skips it (there is no prior homework yet). The review habit begins in Session 2.
 
-> No homework review today — Session 1 is the only session that skips it.
-
-| Time | Activity |
-|---|---|
-| 0:00–0:08 | **Welcome & course tour.** How the 24 sessions work: twice weekly, homework between sessions, every session from next time opens with homework review. Set the promise: "by Session 4 you will have trained a real model." Quick prerequisite pulse-check: ask them to read a 3-line pandas snippet aloud. |
-| 0:08–0:18 | **Concept: the flip.** Open with the Netflix/YouTube question: "Nobody at Netflix wrote an if-statement about *you*. So how does it know?" Draw the two-box diagram live. Land the definition: ML finds the rules from data + answers; the found rules are called a **model**. |
-| 0:18–0:30 | **Guided coding 1 (classwork Part 1):** the hand-written `is_hit_song` rule function. Student adds one rule of their own, then the coach supplies counterexamples until a rule breaks. Discussion: how many rules would real Spotify need? Brittleness is the point. |
-| 0:30–0:40 | **Vocabulary on a real table (classwork Part 2):** the 6-song DataFrame. Student labels features and label, answers the `title` trap question (it identifies, it doesn't inform). Practice the "predict ___ from ___" framing aloud, twice, with different labels on the same table. |
-| 0:40–0:50 | **Guided coding 2 (classwork Part 3): the lookup-table model.** Perfect on every seen song, useless on every new one. Let the student *feel* the fake 100% before naming it: "memorizing, not learning." Say explicitly: "keep this phrase — it comes back in Session 16 as the most important idea in the course." |
-| 0:50–0:55 | **Supervised vs unsupervised (classwork Part 4):** sort the five scenarios. **Stretch (student-driven):** invent one supervised and one unsupervised task from their own life, naming the features and (if any) the label. |
-| 0:55–1:00 | **Wrap.** Recap the three vocabulary wins (features/label, supervised/unsupervised, memorizing vs learning). Glimpse the path: "every project we do follows data → model → evaluation → insight — we'll name it properly in Session 4." Preview homework and point to the explainer. |
+| Phase | What happens | Purpose |
+|---|---|---|
+| Welcome & course tour | How the 24 sessions work: twice weekly, homework between, review from next session on. Set the promise — "by Session 4 you will have trained a real model." Quick prerequisite pulse-check: have the student read a 3-line pandas snippet aloud. | Orient the student and establish the session rhythm and expectations. |
+| Concept: the flip | Open with the Netflix/YouTube question — "Nobody at Netflix wrote an if-statement about *you*. So how does it know?" Draw the two-box diagram live. Land the definition: ML finds rules from data + answers; the found rules are a **model**. | Introduce the single most important distinction of the course. |
+| Guided coding — hand-written rules | classwork Part 1: the `is_hit_song` rule function. The student adds one rule of their own; the coach supplies counterexamples until a rule breaks. Discuss how many rules real Spotify would need. | Make the brittleness of human-written rules *felt*, motivating the flip to ML. |
+| Vocabulary on a real table | classwork Part 2: the 6-song DataFrame. The student names features and label, answers the `title` trap (it identifies, it doesn't inform), and practises "predict ___ from ___" twice with different labels. | Lock in the vocabulary every later session assumes. |
+| Guided coding — the memorizing model | classwork Part 3: the lookup table — perfect on every seen song, useless on every new one. Let the student *feel* the fake 100% before naming it: "memorizing, not learning." Flag explicitly that it returns in Session 16. | The protected moment; seeds the overfitting thread. |
+| Supervised vs unsupervised | classwork Part 4: sort the five scenarios. Stretch (student-driven): invent one supervised and one unsupervised task from their own life, naming the features and (if any) the label. | Establish the second key distinction through the student's own examples. |
+| Wrap | Recap the three vocabulary wins (features/label, supervised/unsupervised, memorizing vs learning). Glimpse the path — "every project follows data → model → evaluation → insight; we name it properly in Session 4." Preview homework and point to the explainer. | Consolidation and the first thread checkpoint. |
 
 ## 6. Differentiation Notes
 
