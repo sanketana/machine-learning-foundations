@@ -18,7 +18,10 @@ Design notes:
     data-prep skills taught in Sessions 2–3. The cleaning required stays
     minimal, per the dataset principles in HANDOFF.md §6.
   - fraud_transactions.csv is intentionally imbalanced (~4% fraud) — it
-    exists to make accuracy fail as a metric in Session 12.
+    exists to make accuracy fail as a metric in Session 12. Its features are
+    deliberately *overlapping* (fraud only mildly differs from legit), so a
+    trained model makes real errors and the precision/recall trade-off in
+    Session 13 has genuine teeth.
   - shoppers.csv is drawn from four latent shopper personas with no label
     column written out; discovering the segments is the Module 5 job.
 
@@ -106,12 +109,22 @@ def make_fraud(rng: np.random.Generator) -> pd.DataFrame:
 
     def transactions(n, is_fraud):
         if is_fraud:
+            # Fraud is a *weak, overlapping* signal, on purpose. Amount is
+            # bimodal — small "card-testing" charges plus some large ones —
+            # and both modes overlap legit spend; distance and velocity are
+            # only mildly elevated. No single feature separates the classes,
+            # so a trained model makes genuine mistakes and moving the
+            # threshold really does trade precision against recall. That is
+            # what the Session 12–13 evaluation and ethics lessons hinge on.
+            small = rng.gamma(1.5, 350, n)
+            large = rng.gamma(2.5, 2600, n)
+            amount = np.where(rng.random(n) < 0.6, large, small).clip(20, 60000).round(0)
             return pd.DataFrame({
-                "amount": rng.gamma(4.0, 6000, n).clip(100, 100000).round(0),
+                "amount": amount,
                 "hour_of_day": rng.choice(24, n, p=_night_heavy_hours()),
-                "is_online": rng.choice([0, 1], n, p=[0.15, 0.85]),
-                "distance_from_home_km": rng.gamma(3.0, 300, n).clip(0, 9000).round(1),
-                "transactions_last_24h": rng.poisson(7.0, n),
+                "is_online": rng.choice([0, 1], n, p=[0.3, 0.7]),
+                "distance_from_home_km": rng.gamma(1.6, 55, n).clip(0, 500).round(1),
+                "transactions_last_24h": rng.poisson(4.5, n),
                 "is_fraud": 1,
             })
         return pd.DataFrame({
